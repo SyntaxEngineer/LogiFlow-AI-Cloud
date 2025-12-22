@@ -18,16 +18,12 @@
 * **Language:** C# (Backend), JavaScript (Frontend)
 
 ## 🏗️ Architecture Flow
+```mermaid
 graph TD
-    User([User / Truck Driver]) -->|Submits Form| React[React Frontend]
-    React -->|POST JSON| HTTP_Func[Azure Function: Ingest Data]
-    HTTP_Func -->|Push Message| Queue[(Azure Storage Queue)]
-    
-    Queue -->|Trigger| Process_Func[Azure Function: ProcessShipment]
-    Process_Func -->|Analyze Text| AI[Azure AI Language Service]
-    AI -->|Return Sentiment| Process_Func
-    
-    Process_Func -->|Save Result| Table[(Azure Table Storage)]
-    
-    React -->|Polls Data| Get_Func[Azure Function: Get Logs]
-    Get_Func -->|Read Data| Table
+    User([User]) -->|1. Submit Log| Client[React Dashboard]
+    Client -->|2. HTTP POST| Ingest[Azure Function: Ingest]
+    Ingest -->|3. Enqueue| Queue[(Storage Queue)]
+    Queue -->|4. Trigger| Processor[Azure Function: Processor]
+    Processor -->|5. Analyze Sentiment| AI[Azure AI Service]
+    Processor -->|6. Store Result| DB[(Table Storage)]
+    Client -->|7. Poll Data| DB
