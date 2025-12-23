@@ -72,4 +72,4 @@ graph TD
     Process_Func -->|Save Result| Table[(Azure Table Storage)]
     
     React -->|Polls Data| Get_Func[Azure Function: Get Logs]
-    Get_Func -->|Read Data| Table```
+    Get_Func -->|Read Data| Table
