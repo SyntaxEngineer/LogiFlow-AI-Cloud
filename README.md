@@ -21,8 +21,8 @@
 * **Language:** C# (Backend), JavaScript (Frontend)
 
 
-# Cloud Infrastructure
-## 📸 Snapshot
+## ☁️ Cloud Infrastructure
+### 📸 Snapshot
 <img width="1825" height="652" alt="image" src="https://github.com/user-attachments/assets/53208563-c0cb-475f-9827-c30cdfca20c0" />
 
 ## ⚙️ Key Resources Used - **Azure Functions (.NET 8 Isolated)** Acts as the serverless compute engine.
@@ -46,7 +46,7 @@
 1. Clone the repository.
 2. Open `LogiFlowBackend.sln` in Visual Studio.
 3. Create a `local.settings.json` file in the project root:
-```json { "IsEncrypted": false, "Values": { "AzureWebJobsStorage": "UseDevelopmentStorage=true", "FUNCTIONS_WORKER_RUNTIME": "dotnet-isolated", "AI_Endpoint": "YOUR_AZURE_AI_ENDPOINT_HERE", "AI_Key": "YOUR_AZURE_AI_KEY_HERE" } }
+{ "IsEncrypted": false, "Values": { "AzureWebJobsStorage": "UseDevelopmentStorage=true", "FUNCTIONS_WORKER_RUNTIME": "dotnet-isolated", "AI_Endpoint": "YOUR_AZURE_AI_ENDPOINT_HERE", "AI_Key": "YOUR_AZURE_AI_KEY_HERE" } }
 
 
 ## Future Improvements
