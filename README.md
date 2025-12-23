@@ -36,6 +36,7 @@
 ### Azure AI Language Service - Provides Natural Language Processing (NLP) to detect sentiment in driver notes: **Positive, Negative, Neutral, Mixed**.
 
 
+
 ## 💻 How to Run Locally
 ### Prerequisites
 - Visual Studio 2022 (with Azure Development workload)
@@ -49,10 +50,13 @@
 { "IsEncrypted": false, "Values": { "AzureWebJobsStorage": "UseDevelopmentStorage=true", "FUNCTIONS_WORKER_RUNTIME": "dotnet-isolated", "AI_Endpoint": "YOUR_AZURE_AI_ENDPOINT_HERE", "AI_Key": "YOUR_AZURE_AI_KEY_HERE" } }
 
 
-## Future Improvements
+
+## 🔮 Future Improvements
 * Authentication: Add Azure AD B2C to secure the "New Entry" form.
 * Real-time Updates: Replace polling with Azure SignalR Service for instant dashboard updates.
 * Maps Integration: Add Azure Maps to visualize truck locations based on city data.
+
+
 
 ## 🏗️ Architecture Flow
 ```mermaid
