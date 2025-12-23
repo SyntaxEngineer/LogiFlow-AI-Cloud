@@ -20,22 +20,6 @@
 * **Frontend:** React + Vite (Single Page Application)
 * **Language:** C# (Backend), JavaScript (Frontend)
 
-## 🏗️ Architecture Flow
-```mermaid
-graph TD
-    User([User / Truck Driver]) -->|Submits Form| React[React Frontend]
-    React -->|POST JSON| HTTP_Func[Azure Function: Ingest Data]
-    HTTP_Func -->|Push Message| Queue[(Azure Storage Queue)]
-    
-    Queue -->|Trigger| Process_Func[Azure Function: ProcessShipment]
-    Process_Func -->|Analyze Text| AI[Azure AI Language Service]
-    AI -->|Return Sentiment| Process_Func
-    
-    Process_Func -->|Save Result| Table[(Azure Table Storage)]
-    
-    React -->|Polls Data| Get_Func[Azure Function: Get Logs]
-    Get_Func -->|Read Data| Table```
-
 
 # Cloud Infrastructure
 ## 📸 Snapshot
@@ -69,3 +53,19 @@ graph TD
 * Authentication: Add Azure AD B2C to secure the "New Entry" form.
 * Real-time Updates: Replace polling with Azure SignalR Service for instant dashboard updates.
 * Maps Integration: Add Azure Maps to visualize truck locations based on city data.
+
+## 🏗️ Architecture Flow
+```mermaid
+graph TD
+    User([User / Truck Driver]) -->|Submits Form| React[React Frontend]
+    React -->|POST JSON| HTTP_Func[Azure Function: Ingest Data]
+    HTTP_Func -->|Push Message| Queue[(Azure Storage Queue)]
+    
+    Queue -->|Trigger| Process_Func[Azure Function: ProcessShipment]
+    Process_Func -->|Analyze Text| AI[Azure AI Language Service]
+    AI -->|Return Sentiment| Process_Func
+    
+    Process_Func -->|Save Result| Table[(Azure Table Storage)]
+    
+    React -->|Polls Data| Get_Func[Azure Function: Get Logs]
+    Get_Func -->|Read Data| Table```
