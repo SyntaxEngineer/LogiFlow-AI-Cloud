@@ -23,6 +23,7 @@
 
 ## ☁️ Cloud Infrastructure
 ### 📸 Snapshot
+<img width="1919" height="869" alt="image" src="https://github.com/user-attachments/assets/34768f20-d086-4a6e-9aad-389f48fd712c" />
 <img width="1825" height="652" alt="image" src="https://github.com/user-attachments/assets/53208563-c0cb-475f-9827-c30cdfca20c0" />
 
 ## ⚙️ Key Resources Used - **Azure Functions (.NET 8 Isolated)** Acts as the serverless compute engine.
